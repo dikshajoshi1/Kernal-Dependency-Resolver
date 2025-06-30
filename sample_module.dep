@@ -1,0 +1,6 @@
+kernel/crypto/crypto_simd.ko.zst:
+kernel/crypto/cryptd.ko.zst: kernel/crypto/crypto_simd.ko.zst
+kernel/crypto/twofish_common.ko.zst:
+kernel/arch/x86/crypto/twofish-x86_64.ko.zst: kernel/crypto/twofish_common.ko.zst
+kernel/arch/x86/crypto/twofish-x86_64-3way.ko.zst: kernel/crypto/twofish_common.ko.zst
+kernel/arch/x86/crypto/twofish-avx-x86_64.ko.zst: kernel/crypto/crypto_simd.ko.zst kernel/crypto/cryptd.ko.zst kernel/arch/x86/crypto/twofish-x86_64-3way.ko.zst kernel/arch/x86/crypto/twofish-x86_64.ko.zst kernel/crypto/twofish_common.ko.zst

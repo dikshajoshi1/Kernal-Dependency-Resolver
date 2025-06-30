@@ -1,0 +1,6 @@
+QT += widgets
+TARGET = kernel_dependency
+TEMPLATE = app
+SOURCES += main.cpp mainwindow.cpp
+HEADERS += mainwindow.h
+FORMS += mainwindow.ui

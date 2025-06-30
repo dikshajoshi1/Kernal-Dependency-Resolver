@@ -1,0 +1,3 @@
+a.ko: b.ko
+b.ko: c.ko
+c.ko: a.ko

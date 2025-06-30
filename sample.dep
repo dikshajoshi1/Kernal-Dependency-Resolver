@@ -1,0 +1,17 @@
+kernel/arch/x86/events/amd/amd-uncore.ko.zst:
+kernel/arch/x86/events/intel/intel-cstate.ko.zst:
+kernel/arch/x86/events/rapl.ko.zst:
+kernel/arch/x86/kernel/cpu/mce/mce-inject.ko.zst:
+kernel/arch/x86/kernel/msr.ko.zst:
+kernel/arch/x86/kernel/cpuid.ko.zst:
+cryptd.ko
+kernel/arch/x86/crypto/twofish-x86_64.ko.zst: kernel/crypto/twofish_common.ko.zst
+kernel/arch/x86/crypto/twofish-x86_64-3way.ko.zst: kernel/arch/x86/crypto/twofish-x86_64.ko.zst kernel/crypto/twofish_common.ko.zst
+kernel/arch/x86/crypto/twofish-avx-x86_64.ko.zst: kernel/crypto/crypto_simd.ko.zst kernel/crypto/cryptd.ko.zst kernel/arch/x86/crypto/twofish-x86_64-3way.ko.zst kernel/arch/x86/crypto/twofish-x86_64.ko.zst kernel/crypto/twofish_common.ko.zst
+kernel/arch/x86/crypto/serpent-sse2-x86_64.ko.zst: kernel/crypto/serpent_generic.ko.zst kernel/crypto/crypto_simd.ko.zst kernel/crypto/cryptd.ko.zst
+kernel/arch/x86/crypto/serpent-avx-x86_64.ko.zst: kernel/crypto/serpent_generic.ko.zst kernel/crypto/crypto_simd.ko.zst kernel/crypto/cryptd.ko.zst
+kernel/arch/x86/crypto/serpent-avx2.ko.zst: kernel/arch/x86/crypto/serpent-avx-x86_64.ko.zst kernel/crypto/serpent_generic.ko.zst kernel/crypto/crypto_simd.ko.zst kernel/crypto/cryptd.ko.zst
+kernel/arch/x86/crypto/des3_ede-x86_64.ko.zst: kernel/lib/crypto/libdes.ko.zst
+kernel/arch/x86/crypto/camellia-x86_64.ko.zst:
+kernel/arch/x86/crypto/camellia-aesni-avx-x86_64.ko.zst: kernel/arch/x86/crypto/camellia-x86_64.ko.zst kernel/crypto/crypto_simd.ko.zst kernel/crypto/cryptd.ko.zst
+
